@@ -1,0 +1,19 @@
+{
+  "name": "lawa-playwright",
+  "version": "1.0.0",
+  "description": "Playwright tests for the LAWA Job Portal",
+  "main": "index.js",
+  "scripts": {
+    "home": "playwright test ./tests/home.spec.ts --reporter=html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^25.9.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
