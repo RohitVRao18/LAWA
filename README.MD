@@ -1,3 +1,36 @@
+How to Run the Test
+
+Run the Playwright test using:
+
+npx playwright test login.spec.ts 
+
+
+The test contains await page.pause() intentionally. This opens the Playwright Inspector and pauses the test so the page can be manually inspected before continuing.
+
+When the Inspector opens:
+
+Check the current page.
+Resume the test from the Playwright Inspector.
+
+
+Once the flow is stable and no manual interaction is required, await page.pause() can be removed.
+
+Manual Verification Code
+
+During registration, the automatic Mailtrap verification code retrieval fails, the test pauses and the verification code must be entered manually.
+
+Open the Mailisk mailbox:
+
+https://mailisk.com/dashboard/mailbox/ei3zekoc04ls
+
+Find the verification email, copy the verification code, and enter it in the verification code field in the browser.
+
+Then click Verify/Submit in the browser and resume the Playwright test from the Inspector.
+
+The test uses await page.pause() intentionally so this manual verification step can be completed before the registration continues.
+
+
+
 # LAWA Job Portal Playwright Tests
 
 - It will run E2E tests 
