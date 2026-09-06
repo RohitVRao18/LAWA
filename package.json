@@ -11,9 +11,11 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.39.0",
-    "@types/node": "^25.9.0"
+    "@types/node": "^25.9.0",
+    "mailisk": "^2.5.1"
   },
   "dependencies": {
-    "dotenv": "^17.4.2"
+    "dotenv": "^17.4.2",
+    "easy-yopmail": "^5.2.2"
   }
 }

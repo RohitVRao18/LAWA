@@ -1,3 +1,28 @@
+import path from "path";
+
+const zipCodes = [
+  "90001",
+  "90002",
+  "90003",
+  "90004",
+  "90005",
+  "90006",
+  "90007",
+  "90008",
+  "90010",
+  "90011",
+  "90012",
+  "90013",
+  "90014",
+  "90015",
+  "90016",
+  "90017",
+  "90018",
+  "90019",
+  "90020",
+  "90021",
+];
+
 export const userData = {
   registeredUser: {
     email: "",
@@ -12,8 +37,7 @@ export const userData = {
     firstName: "Jagdeesh",
     lastName: "W",
     phone: "035-432-4234",
-    zipCode: "90040",
-
+zipCode: zipCodes[Math.floor(Math.random() * zipCodes.length)],
     age: {
       min: 25,
       max: 80,
@@ -30,14 +54,15 @@ export const userData = {
     ethnicity: "Hispanic or Latino",
     race: "Native Hawaiian or Other Pacific Islander",
 
-    profilePhoto: "C:\\LAWA\\testdata\\profile-photo.png",
+    profilePhoto: path.resolve(__dirname, "profile-photo.png"),
   },
 
   getNewUserEmail: () => {
-    const namespace = process.env.MAILISK_NAMESPACE || "test";
+  const namespace = process.env.MAILISK_NAMESPACE || "test";
 
-    return `user_${Date.now()}@${namespace}.mailisk.net`;
-  },
+  return `user_${Date.now()}@${namespace}.mailisk.net`;
+},
+
 
   setRegisteredUser: (email: string, password: string) => {
     userData.registeredUser = {
